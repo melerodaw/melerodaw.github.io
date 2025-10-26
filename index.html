@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TuNombre · Portafolio</title>
+  <meta name="description" content="Portafolio de TuNombre — proyectos, sobre mí y contacto" />
+  <!-- Reemplaza los valores entre corchetes con tu información -->
+  <meta name="author" content="[Tu Nombre]" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1320; --muted:#9aa4b2; --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.04);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#061025);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:980px;margin:36px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042022}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{padding:8px 12px;border-radius:8px;font-weight:600;background:transparent}
+    .hero{margin-top:28px;padding:22px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter: blur(6px)}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin:8px 0 0}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+    .card{background:var(--card);border-radius:10px;padding:14px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 8px}
+    .small{color:var(--muted);font-size:14px}
+
+    .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#042022;font-weight:700;margin-top:12px}
+
+    footer{margin-top:36px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* responsive */
+    @media (max-width:520px){.brand .name{display:none}.logo{width:44px;height:44px}}
+
+    /* subtle focus states for accessibility */
+    a:focus{outline:2px dashed var(--accent);outline-offset:4px}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">GH</div>
+        <div>
+          <div class="name" style="font-weight:700">[Tu Nombre]</div>
+          <div class="small">Desarrollador · Frontend · Proyecto hobby</div>
+        </div>
+      </div>
+      <nav aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://github.com/[TU_USUARIO]" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <h1>Hola — soy <strong>[Tu Nombre]</strong>, hago cosas con código.</h1>
+      <p class="lead">Aquí verás una selección de proyectos que he publicado en GitHub. Haz click en cualquiera para ver el repositorio o una demo.</p>
+      <a class="cta" href="#proyectos">Ver proyectos</a>
+    </section>
+
+    <section id="proyectos" aria-labelledby="proyectos-title">
+      <h2 id="proyectos-title" style="margin-top:28px">Proyectos</h2>
+      <div class="grid">
+        <!-- Repite/duplica estas tarjetas para cada proyecto -->
+        <article class="card">
+          <h3>Proyecto 1</h3>
+          <div class="small">Tecnologías: HTML · CSS · JavaScript</div>
+          <p class="small" style="margin-top:8px">Breve descripción del proyecto. Qué resuelve y cómo lo implementaste.</p>
+          <p style="margin-top:10px"><a href="https://github.com/[TU_USUARIO]/[repo-1]" target="_blank" rel="noopener">Repositorio ↗</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Proyecto 2</h3>
+          <div class="small">Tecnologías: React · Node</div>
+          <p class="small" style="margin-top:8px">Pequeña descripción del segundo proyecto.</p>
+          <p style="margin-top:10px"><a href="https://github.com/[TU_USUARIO]/[repo-2]" target="_blank" rel="noopener">Repositorio ↗</a></p>
+        </article>
+
+        <!-- Tarjeta genérica si no tienes más proyectos -->
+        <article class="card">
+          <h3>Más por venir</h3>
+          <div class="small">Sigue mi GitHub para ver actualizaciones.</div>
+          <p style="margin-top:10px"><a href="https://github.com/[TU_USUARIO]" target="_blank" rel="noopener">Mi usuario en GitHub ↗</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre-mi" style="margin-top:22px">
+      <h2>Sobre mí</h2>
+      <div class="card" style="margin-top:10px">
+        <p class="small" style="margin:0">Soy [Tu Nombre], estudio/desarrollo en [tu área]. Me interesa crear interfaces limpias y proyectos que aprendan del usuario. Actualmente trabajo en <em>[tema]</em> y publico código abierto en GitHub.</p>
+      </div>
+    </section>
+
+    <section id="contacto" style="margin-top:22px">
+      <h2>Contacto</h2>
+      <div class="card" style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+        <div class="small">Email: <a href="mailto:tu.email@ejemplo.com">tu.email@ejemplo.com</a></div>
+        <div class="small">LinkedIn: <a href="https://www.linkedin.com/in/[tu-perfil]" target="_blank" rel="noopener">/in/[tu-perfil]</a></div>
+        <div class="small">Si prefieres, deja un issue en cualquiera de los repositorios.</div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year">2025</span> [Tu Nombre] · <a href="https://github.com/[TU_USUARIO]" target="_blank" rel="noopener">github.com/[TU_USUARIO]</a>
+    </footer>
+  </main>
+  <script>
+    // Rellenos útiles: actualiza el año y valores iniciales
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
