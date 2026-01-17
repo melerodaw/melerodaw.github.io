@@ -38,6 +38,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    object-fit: cover;
+    object-position: center 15%;
 }
 .header-info h1 {
     font-size: 2.5em;
@@ -121,9 +123,24 @@ header {
     padding: 40px;
     background: transparent;
 }
+.education-item {
+    margin-bottom: 20px;
+}
+.education-item h3 {
+    color: #e2e8f0;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+.education-item .institution {
+    color: #60a5fa;
+    font-weight: 600;
+}
+.education-item .year {
+    color: #718096;
+    font-style: italic;
+}
 .project {
     margin-bottom: 30px;
-    border-bottom: 1px solid #2d3748;
 }
 .project:last-child {
     border-bottom: none;
@@ -154,21 +171,20 @@ header {
 .project p {
     color: #cbd5e0;
 }
-.education-item {
-    margin-bottom: 20px;
-}
-.education-item h3 {
-    color: #e2e8f0;
-    font-size: 1.1em;
-    margin-bottom: 5px;
-}
-.education-item .institution {
+.btn-more {
+    display: inline-block;
     color: #60a5fa;
-    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    transition: all 0.2s ease;
 }
-.education-item .year {
-    color: #718096;
-    font-style: italic;
+.btn-more:hover {
+    background: rgba(96, 165, 250, 0.2);
+    border-color: #60a5fa;
 }
 .profile-box {
     background: rgba(74, 85, 104, 0.2);
@@ -184,6 +200,7 @@ header {
     color: #60a5fa;
     font-weight: 600;
 }
+
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;
